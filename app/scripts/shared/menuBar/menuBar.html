@@ -1,0 +1,46 @@
+<md-menu-bar >
+	<md-menu >
+		<button ng-click="$mdOpenMenu()"  class="menu-color" >
+			Dashboard
+		</button>
+		
+		<md-menu-content>
+			<md-menu-item>
+				<md-button ng-click="ctrl.sampleAction('share', $event)">
+					Dashboard 1
+				</md-button>
+			</md-menu-item>
+			<md-menu-item>
+				<md-button ng-click="ctrl.sampleAction('share', $event)">
+					Dashboard 2
+				</md-button>
+			</md-menu-item>
+		</md-menu-content>
+	</md-menu>
+	<md-menu>
+		<button ng-click="nextpage()" class="menu-color">
+			Learning Resources
+		</button>
+	</md-menu>
+	<md-menu>
+		<button ng-click="$mdOpenMenu()" class="menu-color">
+			Resource Management
+		</button>
+	</md-menu>
+	<md-menu>
+		<button ng-click="$mdOpenMenu()" class="menu-color">
+	      Delivery Capacity Planning
+		</button>
+	</md-menu>
+	<md-menu>
+		<button ng-click="$mdOpenMenu()" class="menu-color">
+			Staff
+		</button>
+	</md-menu>	
+	<md-menu>
+		<button ng-click="$mdOpenMenu()" class="menu-color">
+			Administration
+		</button>
+	</md-menu>	
+</md-menu-bar>
+
