@@ -14,9 +14,9 @@
 
 	function menuBarCtrl($mdDialog) {
 		var _self = this;
-
-		_self.sampleAction = function(name, ev) {
-			$mdDialog.show($mdDialog.alert().title(name).textContent('You triggered the "' + name + '" action').ok('Great').targetEvent(ev));
+	
+     _self.loadView = function(view) {
+			$state.go('home.' + view);
 		};
 	}
 

@@ -1,23 +1,109 @@
 (function() {
 
 	'use strict';
-
-	/**
-	 * @ngdoc function
-	 * @name amV01App.controller:MaincontrollerCtrl
-	 * @description
-	 * # MaincontrollerCtrl
-	 * Controller of the amV01App
-	 */
-	angular.module('amV01App.components.main').controller('mainCtrl', mainCtrl);
-	mainCtrl.$inject = ['$mdSidenav'];
-
-	function mainCtrl($mdSidenav, $mdDialog) {
-		var _self = this;
-
-		_self.toggle = function() {
+	angular.module('amV01App.components.main').controller('mainCtrl', ['$mdSidenav','$mdDialog','$scope',function ($mdSidenav, $mdDialog,$scope) {
+		$scope.toggle = function() {
 			$mdSidenav('right').toggle();
 		};		
-	}
-
+		$scope.requestObject=[
+		{'requestid':'12345',
+		'requesttitle':'test title',
+		'requestor':'test requestor',
+		'businessunit':'test businessunit',
+		'market':'test market',
+		'date':'09/12/2015',
+		'phase':'test phase',
+		'status':'In Progress'},
+		{'requestid':'12345',
+		'requesttitle':'test title',
+		'requestor':'test requestor',
+		'businessunit':'test businessunit',
+		'market':'test market',
+		'date':'09/12/2015',
+		'phase':'test phase',
+		'status':'In Progress'},
+		{'requestid':'12345',
+		'requesttitle':'test title',
+		'requestor':'test requestor',
+		'businessunit':'test businessunit',
+		'market':'test market',
+		'date':'09/12/2015',
+		'phase':'test phase',
+		'status':'In Progress'},
+		{'requestid':'12345',
+		'requesttitle':'test title',
+		'requestor':'test requestor',
+		'businessunit':'test businessunit',
+		'market':'test market',
+		'date':'09/12/2015',
+		'phase':'test phase',
+		'status':'In Progress'},
+		{'requestid':'12345',
+		'requesttitle':'test title',
+		'requestor':'test requestor',
+		'businessunit':'test businessunit',
+		'market':'test market',
+		'date':'09/12/2015',
+		'phase':'test phase',
+		'status':'In Progress'},
+		{'requestid':'12345',
+		'requesttitle':'test title',
+		'requestor':'test requestor',
+		'businessunit':'test businessunit',
+		'market':'test market',
+		'date':'09/12/2015',
+		'phase':'test phase',
+		'status':'In Progress'},
+		{'requestid':'12345',
+		'requesttitle':'test title',
+		'requestor':'test requestor',
+		'businessunit':'test businessunit',
+		'market':'test market',
+		'date':'09/12/2015',
+		'phase':'test phase',
+		'status':'In Progress'},
+		{'requestid':'12345',
+		'requesttitle':'test title',
+		'requestor':'test requestor',
+		'businessunit':'test businessunit',
+		'market':'test market',
+		'date':'09/12/2015',
+		'phase':'test phase',
+		'status':'In Progress'},
+		{'requestid':'12345',
+		'requesttitle':'test title',
+		'requestor':'test requestor',
+		'businessunit':'test businessunit',
+		'market':'test market',
+		'date':'09/12/2015',
+		'phase':'test phase',
+		'status':'In Progress'},
+		{'requestid':'12345',
+		'requesttitle':'test title',
+		'requestor':'test requestor',
+		'businessunit':'test businessunit',
+		'market':'test market',
+		'date':'09/12/2015',
+		'phase':'test phase',
+		'status':'In Progress'},
+		{'requestid':'12345',
+		'requesttitle':'test title',
+		'requestor':'test requestor',
+		'businessunit':'test businessunit',
+		'market':'test market',
+		'date':'09/12/2015',
+		'phase':'test phase',
+		'status':'In Progress'},
+		{'requestid':'12345',
+		'requesttitle':'test title',
+		'requestor':'test requestor',
+		'businessunit':'test businessunit',
+		'market':'test market',
+		'date':'09/12/2015',
+		'phase':'test phase',
+		'status':'In Progress'}
+         
+		];
+	}]);
+	
 })();

@@ -9,28 +9,44 @@
  * Main module of the application.
  */
 angular.module('amV01App', [
+		'ui.router',
+		'ngMaterial',
+		'ngLocalize',
+		'ngLocalize.Config',
+		'ngLocalize.InstalledLanguages',
+		'ngLocalize.Events',
+		/*shared components*/
+		'amV01App.components.main',
+		'amV01App.components.login',
+		'amV01App.components.dashboard',
+		'amV01App.shared.menuBar',
+		'amV01App.shared.slider',
+		'amV01App.shared.header',
+		'amV01App.shared.footer',
+		'amV01App.shared.input',
+		'amV01App.components.learningResource',
+		'amV01App.components.profile'
 
-	'ui.router', 
-	'ngMaterial', 
-	'amV01App.components.main', 
-	'amV01App.shared.menuBar',
-	'amV01App.shared.slider',
-	'amV01App.shared.footer'
-
-	
-	]).config(function($stateProvider, $urlRouterProvider) {
-	//
-	// For any unmatched url, redirect to /state1
-	$urlRouterProvider.otherwise('/');
-	//
-	// Now set up the states
-	$stateProvider.state('home', {
-		url : '/',
-		templateUrl : 'scripts/components/main/main.html',
-		controller : 'mainCtrl',
-		controllerAs : 'ctrl'
-	});
-	
-	
-	
+	]).value('localeSupported', [
+        'en-US',
+        'fr-FR'
+  ]).config(function($stateProvider, $urlRouterProvider) {
+		$stateProvider.state('home', {
+			url : '/home',
+			abstract : true,
+			templateUrl : 'scripts/components/main/main.html',
+			controller : 'mainCtrl',
+		}).state('home.dashboard', {
+			url : '/dashboard',
+			templateUrl : 'scripts/components/dashboard/dashboard.html',
+			controller : 'dashboardCtrl',
+			controllerAs : 'ctrl'
+		}).state('home.learningResource', {
+			url : '/learningResource',
+			templateUrl : 'scripts/components/learningResource/learningResource.html',
+			controller : 'learningResourceCtrl',
+			controllerAs : 'ctrl'
+		});
+		// For any unmatched url, redirect to /state1
+		$urlRouterProvider.otherwise('/home/dashboard');
 });

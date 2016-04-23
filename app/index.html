@@ -5,28 +5,12 @@
 		<title></title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
-		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<!-- build:css(.) styles/vendor.css -->
-		<!-- bower:css -->
 		<link href="bower_components/angular-material/angular-material.css" type="text/css" rel="stylesheet" />
 		<link rel="stylesheet" href="bower_components/angular-material-icons/angular-material-icons.css" />
-
-		<!-- endbower -->
-		<!-- endbuild -->
-		<!-- build:css(.tmp) styles/main.css -->
-		<link rel="stylesheet" href="styles/main.css">
-		<!-- endbuild -->
+		<link rel="stylesheet" type="text/css" href="styles/main.css" >
 	</head>
 	<body ng-app="amV01App">
-		<!--[if lte IE 8]>
-		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-
-		<!-- Add your site or application content here -->
-
 		<div ui-view></div>
-
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 		<script>
 			! function(A, n, g, u, l, a, r) {
 				A.GoogleAnalyticsObject = l, A[l] = A[l] ||
@@ -38,11 +22,11 @@
 			ga('create', 'UA-XXXXX-X');
 			ga('send', 'pageview');
 		</script>
-
-		<!-- build:js(.) scripts/vendor.js -->
-		<!-- bower:js -->
 		<script src="bower_components/jquery/dist/jquery.js"></script>
 		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+		<script src="bower_components/angular-localization/angular-localization.js"></script>		
 		<script src="bower_components/angular-animate/angular-animate.js"></script>
 		<script src="bower_components/angular-aria/angular-aria.js"></script>
 		<script src="bower_components/angular-messages/angular-messages.js"></script>
@@ -50,32 +34,45 @@
 		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 		<script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
 
-    
-		<!-- endbower -->
-		<!-- endbuild -->
 
-		<!-- build:js({.tmp,app}) scripts/scripts.js -->
 		<script src="scripts/app.js"></script>
-				
+
 		<script src="scripts/components/main/amV01App.conponents.main.config.js"></script>
 		<script src="scripts/components/main/main.ctrl.js"></script>
 
+		<script src="scripts/components/learningResource/amV01App.conponents.learningResource.config.js"></script>
+		<script src="scripts/components/learningResource/learningResource.ctrl.js"></script>
 
-		<!--  <script src="scripts/components/login/amV01App.components.login.config.js"></script>
-		<script src="scripts/components/login/login.dir.js"></script>
-		<script src="scripts/components/login/login.ctrl.js"></script> -->
-		
+
 		<script src="scripts/shared/menuBar/amV01App.shared.menuBar.config.js"></script>
 		<script src="scripts/shared/menuBar/menuBar.dir.js"></script>
 		<script src="scripts/shared/menuBar/menuBar.ctrl.js"></script>
-				
+
 		<script src="scripts/shared/slider/amV01App.shared.slider.config.js"></script>
 		<script src="scripts/shared/slider/slider.dir.js"></script>
 		<script src="scripts/shared/slider/slider.ctrl.js"></script>
 
+        <script src="scripts/shared/header/amV01App.shared.header.config.js"></script>
+		<script src="scripts/shared/header/header.dir.js"></script>
+		<script src="scripts/shared/header/header.ctrl.js"></script>
+
 		<script src="scripts/shared/footer/amV01App.shared.footer.config.js"></script>
 		<script src="scripts/shared/footer/footer.dir.js"></script>
 		<script src="scripts/shared/footer/footer.ctrl.js"></script>
-		<!-- endbuild -->
+
+		<script src="scripts/shared/input/amV01App.shared.input.config.js"></script>
+		<script src="scripts/shared/input/input.dir.js"></script>
+		<script src="scripts/shared/input/input.ctrl.js"></script>
+
+		<script src="scripts/components/profile/amV01App.conponents.profile.config.js"></script>
+		<script src="scripts/components/profile/profile.dir.js"></script>
+		<script src="scripts/components/profile/profile.ctrl.js"></script>
+
+		<script src="scripts/components/login/amV01App.conponents.login.config.js"></script>
+		<script src="scripts/components/login/login.dir.js"></script>
+		<script src="scripts/components/login/login.ctrl.js"></script>
+
+		<script src="scripts/components/dashboard/amV01App.conponents.dashboard.config.js"></script>
+		<script src="scripts/components/dashboard/dashboard.ctrl.js"></script>
 	</body>
 </html>

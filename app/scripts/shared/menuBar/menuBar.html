@@ -1,46 +1,88 @@
-<md-menu-bar >
-	<md-menu >
-		<button ng-click="$mdOpenMenu()"  class="menu-color" >
-			Dashboard
-		</button>
-		
-		<md-menu-content>
-			<md-menu-item>
-				<md-button ng-click="ctrl.sampleAction('share', $event)">
-					Dashboard 1
-				</md-button>
-			</md-menu-item>
-			<md-menu-item>
-				<md-button ng-click="ctrl.sampleAction('share', $event)">
-					Dashboard 2
-				</md-button>
-			</md-menu-item>
-		</md-menu-content>
-	</md-menu>
-	<md-menu>
-		<button ng-click="nextpage()" class="menu-color">
-			Learning Resources
-		</button>
-	</md-menu>
-	<md-menu>
-		<button ng-click="$mdOpenMenu()" class="menu-color">
-			Resource Management
-		</button>
-	</md-menu>
-	<md-menu>
-		<button ng-click="$mdOpenMenu()" class="menu-color">
-	      Delivery Capacity Planning
-		</button>
-	</md-menu>
-	<md-menu>
-		<button ng-click="$mdOpenMenu()" class="menu-color">
-			Staff
-		</button>
-	</md-menu>	
-	<md-menu>
-		<button ng-click="$mdOpenMenu()" class="menu-color">
-			Administration
-		</button>
-	</md-menu>	
+<div>
+<md-menu-bar class="menu-nav">  
+<ul class="topnav">
+  <md-menu>
+        <li  ng-click="$mdOpenMenu()" >
+            <a href="#" >Dashboard</a>
+        </li>
+        
+    </md-menu>
+    <md-menu>
+        <li  ng-click="$mdOpenMenu()">
+            <a href="#" >Learning Resource</a>
+        </li>
+        <md-menu-content style="min-width: 150px !important; margin-top: 185px;background-color: rgb(239, 239, 239);">
+            <md-menu-item>
+                <md-button ng-click="ctrl.sampleAction('share', $event)">
+                  Home
+                </md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item>
+                <md-button ng-click="ctrl.sampleAction('share', $event)">
+                  Reports
+                </md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+    <md-menu>
+        <li  ng-click="$mdOpenMenu()">
+            <a href="#" >Resource Management</a>
+        </li>
+        <md-menu-content style="min-width: 150px !important; margin-top: 185px;background-color: rgb(239, 239, 239);">
+            <md-menu-item>
+                <md-button ng-click="ctrl.sampleAction('share', $event)">
+                  Home
+                </md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item>
+                <md-button ng-click="ctrl.sampleAction('share', $event)">
+                  Reports
+                </md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+    <md-menu>
+        <li  ng-click="$mdOpenMenu()">
+            <a href="#" >Delivery capacity planning</a>
+        </li>
+        <md-menu-content style="min-width: 150px !important; margin-top: 185px;background-color: rgb(239, 239, 239);">
+            <md-menu-item>
+                <md-button ng-click="ctrl.sampleAction('share', $event)">
+                  Home
+                </md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item>
+                <md-button ng-click="ctrl.sampleAction('share', $event)">
+                  Reports
+                </md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+    <md-menu>
+        <li  ng-click="$mdOpenMenu()">
+            <a href="#" >Staff</a>
+        </li>
+    </md-menu>
+    <md-menu>
+        <li  ng-click="$mdOpenMenu()">
+           <a href="#" >Administration</a>
+        </li>
+        <md-menu-content style="min-width: 150px !important; margin-top: 185px;background-color: rgb(239, 239, 239);">
+            <md-menu-item>
+                <md-button ng-click="ctrl.sampleAction('share', $event)">
+                  Home
+                </md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item>
+                <md-button ng-click="ctrl.sampleAction('share', $event)">
+                  Reports
+                </md-button>
+        </md-menu-content>
+    </md-menu>
+</ul>
 </md-menu-bar>
-
+</div> 

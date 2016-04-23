@@ -2,123 +2,60 @@
 	<div layout="row">
 		<div layout="column" flex>
 			<div layout="row" >
-				<md-toolbar class="md-hue-2" >
-					<div class="md-toolbar-tools">
-						<img src="images/amexlogo.png" alt="logo" class="md-image" />
-						<h1 class="md-header">WSLN Central</h1>
-						<div >
-						<input type="search" class="search" placeholder="Request ID">
-						<img src="images/ic_search_black_18px.svg" alt="searchlogo" class="md-search"/>
-						</div>
-					     <!-- <div class="pull-right">
-							<div class="pull-left SearchBar">
-								<!--below code using typeahead-->
-								<!-- <div class="form-group input-group" >
-
-									<input type="text" class="rally-search-button"  id="myTypeahead" autocomplete="off"
-									placeholder="Request ID" uib-typeahead="" typeahead-no-results="">
-									<span class="md-profile" >J.Smith Jone
-										<br />
-										Administrator</span>
-
-								</div>
-							</div>
-						</div> -->
- 				<!-- <ln-login></ln-login> -->
-                   </div>				
-				</md-toolbar>
-			</div>
-			<div layout="row" flex>
+				 <md-toolbar class="md-hue-2" >
+					 <div class="md-toolbar-tools">
+						 <div layout="row" layout-align="space-between" class="md-header-align">
+						 <img src="images/amexlogo.png" alt="logo" class="md-image" />
+						 <h1 class="md-header">{{ 'main.siteHeader' | i18n }}</h1>
+						   <ln-login></ln-login>
+						   <ln-profile></ln-profile>
+						  </div>
+            </div>
+				 </md-toolbar>
+			  </div>
+			<div layout="column" flex>
 				<md-toolbar class="md-hue-2">
-					<div class="md-toolbar-tools md-backgrd">
-						<ln-menu-bar></ln-menu-bar>
-						<span flex class="flex"></span>
-						<!-- <ln-login></ln-login> -->
-						<md-button class="md-icon-button" hide-gt-sm ng-click="ctrl.toggle()">
-							<md-icon md-svg-icon="images/icons/menu.svg" ></md-icon>
-						</md-button>
+					 <div class="md-toolbar-navigation">
+						 <ln-menu-bar></ln-menu-bar>
 					</div>
-					<div><h1 class="card-head">Request Search</h1></div>
-					 <md-content  flex>
-							<md-card class="card">
-
-								<md-card-title>
-
-									<md-card-title-text>
-
-									<md-menu-bar>
-
-									  <md-menu> <div class="testcard request">Request ID</div></md-menu>
-									  <md-menu> <div class="testcard">Request Title</div></md-menu>
-                                       <md-menu><div class="testcard"> Requestor</div></md-menu>
-                                       <md-menu><div class="testcard">Business Unit</div></md-menu>
-                                       <md-menu><div class="testcard"> Market</div></md-menu>
-                                       <md-menu><div class="testcard"> Date</div></md-menu>
-                                       <md-menu><div class="testcard">Phase</div></md-menu>
-                                       <md-menu><div class="testcard"> Status</div></md-menu><hr/>
-                                       </md-menu-bar>
-
-									</md-card-title-text>
-									<md-card-title-media>
-
-										<div class="md-media-lg card-media"></div>
-									</md-card-title-media>
-								</md-card-title>
-								<!-- <md-card-actions layout="row" layout-align="end center">
-									<md-button>
-										Action 1
-									</md-button>
-									<md-button>
-										Action 2
-									</md-button>
-								</md-card-actions> -->
-							</md-card>
-						<md-card>
-							<md-card-title>
-								<md-card-title-text>
-									Test Card 2
-								</md-card-title-text>
-								<md-card-title-media>
-									<div class="md-media-lg card-media"></div>
-								</md-card-title-media>
-							</md-card-title>
-							<md-card-actions layout="row" layout-align="end center">
-								<md-button>
-									Action 1
-								</md-button>
-								<md-button>
-									Action 2
-								</md-button>
-							</md-card-actions>
-						</md-card>
-                        
-                        <md-card>
-							<md-card-title>
-								<md-card-title-text>
-									Test Card 3
-								</md-card-title-text>
-								<md-card-title-media>
-									<div class="md-media-lg card-media"></div>
-								</md-card-title-media>
-							</md-card-title>
-							<md-card-actions layout="row" layout-align="end center">
-								<md-button>
-									Action 1
-								</md-button>
-								<md-button>
-									Action 2
-								</md-button>
-							</md-card-actions>
-						</md-card>
-
-					</md-content>
+					 <md-content flex class="md-content-margin">
+					 <div layout="row" class="requestsearch">
+					 <h1>{{ 'main.siteSearch' | i18n }}</h1>
+					 <a href="javascript:void(0)">
+					 	<img src="images/requestSearch.png" alt="logo" class="requestSearchIcon" />
+					 </a>
+						<md-button class="md-accent md-raised md-hue-1">{{ 'main.save' | i18n }}</md-button>
+						<md-button class="md-accent md-raised md-hue-1">{{ 'main.cancel' | i18n }}</md-button>
+					 </div>
+					 </md-content>
 				</md-toolbar>
 			</div>
-		</div>
-		<!--ln-slider></ln-slider-->
-	</div> 
-	<!-- <div layout="row" flex style="position:absolute; bottom:0;background-color:lightgray;"> -->
-	<div class="md-toolbar-tools " style="background-color:lightgray" >
-		<ln-footer></ln-footer>
-	</div>
+	 <div>
+            <div class="card">
+				<div layout="column">
+					<div layout="row" class="tableborder" >
+					  <div class="tblhdr col1">{{ 'main.requestId' | i18n }}</div>
+						<div class="tblhdr col2">{{ 'main.requestTitle' | i18n }}</div>
+              <div class="tblhdr col3">{{ 'main.requestor' | i18n }}</div>
+              <div class="tblhdr col4">{{ 'main.businessUnit' | i18n }}</div>
+              <div class="tblhdr col5">{{ 'main.market' | i18n }}</div>
+              <div class="tblhdr col6">{{ 'main.date' | i18n }}</div>
+              <div class="tblhdr col7">{{ 'main.phase' | i18n }}</div>
+              <div class="tblhdr col8">{{ 'main.status' | i18n }}</div>
+						</div>
+						<div layout="row" class="tableborder" ng-repeat="item in requestObject">
+							<div class="tblrow col1"><a href="javascript:void(0)">{{item.requestid}}</a></div>
+							<div class="tblrow col2">{{item.requesttitle}}</div>
+							<div class="tblrow col3">{{item.requestor}}</div>
+							<div class="tblrow col4">{{item.businessunit}}</div>
+							<div class="tblrow col5">{{item.market}}</div>
+							<div class="tblrow col6">{{item.date}}</div>
+							<div class="tblrow col7">{{item.phase}}</div>
+							<div class="tblrow col8">{{item.status}}</div>
+						</div>
+				</div>
+			</div>
+    </div>
+    <ln-input></ln-input>
+	<ln-footer></ln-footer>
 </div>
