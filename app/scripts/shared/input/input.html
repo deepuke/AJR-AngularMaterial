@@ -1,0 +1,65 @@
+<div>
+<div layout-gt-sm="row" class= "margin-input" >
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Request Type</label>
+          <input md-maxlength="30" required name="requesttype" ng-model="user.request" class="search" />
+        </md-input-container>
+        <div flex="5" hide-xs hide-sm>
+          <!-- Spacer //-->
+        </div>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Request Last Name</label>
+          <input name="requestlastname" ng-model="user.lastname"  class="search" />
+        </md-input-container>
+        <div flex="5" hide-xs hide-sm>
+          <!-- Spacer //-->
+        </div>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Date From</label>
+          <input name="datafrom" ng-model="user.datafrom"  class="search" />
+        </md-input-container>
+  </div>
+  <div layout-gt-sm="row" class= "margin-input" >
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Request Title</label>
+          <input name="requesttitle" ng-model="user.requesttitle" class="search" />
+        </md-input-container>
+        <div flex="5" hide-xs hide-sm>
+          <!-- Spacer //-->
+        </div>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Course Type</label>
+          <input name="coursetype" ng-model="user.coursetype"  />
+        </md-input-container>
+        <div flex="5" hide-xs hide-sm>
+          <!-- Spacer //-->
+        </div>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Business Unit</label>
+          <input name="businessunit" ng-model="user.businessunit" class="search" />
+        </md-input-container>
+   </div>
+<!-- </div> -->
+<div layout-gt-sm="row" class= "margin-input" >
+	    <md-select placeholder="Name" ng-model="name" md-on-open="loadUsers()" style="min-width: 200px;">
+	      <md-option ng-value="user" ng-repeat="name in users">{{user.name}}</md-option>
+	    </md-select>
+	    <div flex="5" hide-xs hide-sm>
+          <!-- Spacer //-->
+        </div>
+	    <md-select placeholder="Type" ng-model="type" md-on-open="loadUsers()" style="min-width: 200px;">
+	      <md-option ng-value="user" ng-repeat="type in users">{{user.type}}</md-option>
+	    </md-select>
+	    <div flex="5" hide-xs hide-sm>
+          <!-- Spacer //-->
+        </div>
+	    <md-select placeholder="Delivery Mode" ng-model="delivery" md-on-open="loadUsers()" style="min-width: 200px;">
+	      <md-option ng-value="user" ng-repeat="delivery in users">{{user.deliverymode}}</md-option>
+	    </md-select> 
+        <div flex="5" hide-xs hide-sm>
+          <!-- Spacer //-->
+        </div>
+	     <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+	</div>    
+
+</div>

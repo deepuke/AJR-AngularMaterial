@@ -1,0 +1,14 @@
+{
+  "siteHeader" : "WSLN Central",
+  "siteSearch" : "Request Search",
+  "save" : "Save",
+  "cancel" : "Cancel",
+  "requestId" :"Request ID",
+  "requestTitle" :"Request Title",
+  "requestor" :"Requestor",
+  "businessUnit" :"Business Unit",
+  "market" :"Market",
+  "date" :"Date",
+  "phase" :"Phase",
+  "status" :"Status"
+}
